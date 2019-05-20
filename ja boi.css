@@ -1,0 +1,13 @@
+.column{
+    float: right;
+    width: 25%;
+    padding: 10px;
+    height: 200px;
+    padding-right:100px;
+    padding-top:100px;
+
+}
+.border{
+    border-left: 6px solid green;
+    height: 300px;
+}
