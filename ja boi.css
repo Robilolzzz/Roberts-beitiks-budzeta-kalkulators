@@ -1,13 +1,66 @@
-.column{
-    float: right;
-    width: 25%;
-    padding: 10px;
-    height: 200px;
-    padding-right:100px;
-    padding-top:100px;
-
-}
-.border{
-    border-left: 6px solid green;
-    height: 300px;
-}
+/* Nodefinē kontenera maksimālo platumu un ar margin: auto nocentre */
+.container {
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  /* Pieškir izkārtojumu ar css grid, priekš desktop*/
+  @media only screen and (min-width: 700px) {
+    .grid_layout {
+      display: grid;
+      grid-template-areas: 'top top' 'left right';
+      grid-gap: 10px;
+      padding: 15px;
+      grid-template-rows: 150px;
+      grid-auto-rows: 600px;
+    }
+  }
+  
+  .top {
+    grid-area: top;
+    text-align: center;
+  }
+  
+  .left {
+    grid-area: left;
+  }
+  
+  .right {
+    grid-area: right;
+  }
+  
+  .container > div {
+    padding: 30px;
+    border: 1px blueviolet solid;
+  }
+  
+  .container > div h1 {
+    margin-top: 0;
+  }
+  
+  .budget__value {
+    padding-bottom: 30px;
+  }
+  
+  .budget__total {
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+  
+  /* styling for income and expeses list */
+  .list {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .list_item {
+    display: flex;
+    justify-content: space-between;
+  }
+  .list__inner {
+    flex-grow: 1;
+  }
+  
+  .list__total {
+    align-self: flex-end;
+  }

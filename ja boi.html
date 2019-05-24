@@ -1,42 +1,41 @@
-<!DOCTYPE html>
 <html>
-<head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" type="text/css" href="ja boi.css" />
-        <script src="ja boi.js" ></script>
-<title>Budget calculator</title>
-</head>
-<body>
-    
-    <p>Kur nauda tiek izmantota</p>
-    <input type="text" name="anaudinj"><br>
-    <p>Enter spent amount</p>
-    € <input type="text" name="bnaudinj"><br>
-    <p>Apzīmē ienākumus, izdevumus</p>
-    <select>
-            <option value="naudinj"></option>
-            </select></div>
-           <div class="column"> 
-           <h>Izdevumi</h>
-           <p><li>1.Dzīvoklis 300€</li>
-           <li>2.Apģērbs 100€</li>
-           <li>3. Ēdiens 200€</li>
-           <li></li>
-           <p1>Summa 600€</p1>
-           </p>    
+	<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="ja boi.css">
+	</head>
+	<body>
+		<div class="container grid_layout">
+      <div class="top">
+        <div class="budget__title">Pieejamais budžets</div>
+        <div class="budget__total"><span id="budget__value">100</span>€</div>
+        <div class="budget__add">
+          <select id="add_type">
+            <option value="income">+</option>
+            <option value="expense">-</option>
+          </select>
+          <input id="add_description" type="text" name="description" placeholder="Apraksts">
+          <input id="add_value" type="number" name="value" placeholder="summa">
+          <button onclick="myfunction()">Pievienot</button>
         </div>
-       
-          <div class="column"> 
-          <h>Ienākumi</h>
-           <p><li>1.Alga 600€</li>
-           <li>2.Stīpa 9€</li>
-           <li></li>
-           <li>Summa 609€</li>
-        </p>   
-        
-           <h2>Atlikums - 9€</h2>
+      </div>
 
+			<div class="income left list">
+				<h1>Ienākumi</h1>
+				<div id="all_income" class="list__inner">
+          <div class="list_item"><div class="list_description">Alga</div><div class="list_value">+200€</div></div>
+				</div>
+				<div class="list__total">+<span class="total_income">200</span>€</div>
+			</div>
 
-    
-</body>
+			<div class="expenses right list">
+				<h1>Izdevumi</h1>
+				<div id="all_expenses" class="list__inner">
+            <div class="list_item"><div class="list_description">Ēdiens</div><div class="list_value">-100€</div></div>
+				</div>
+				<div class="list__total">-<span class="total_expenses">100</span>€</div>
+			</div>
+
+		</div>
+  </body>
+  <script src="ja boi.js"></script>
 </html>
