@@ -20,10 +20,13 @@ function myFunction() {
 console.log("rtv");
 }
 //7.Funkcijai_3 jāpārbauda vai apraksta un summas lauks ir aizpildīts, ja nav, tad izvada paziņojumu par to, ka kāds no laukiem nav aizpildīts
+
 //8.Funkcijai_3 ir jāizsauc funkcija_2, kas pievieno ienākumu vai izdevumu sarakstam jaunu ierakstu.
 //9.Lai pārbaudītu vai izveidotās funkcijas darbojas pareizi, izsauc tās zemāk un ievieto fake datus
 //10.Izsaukt funkciju_2, kas pievieno ienākumu sarakstam vertības
+
 //11.Izsaukt funkciju_2, kas pievieno izdevumu sarakstam vertības
+
 //12.Izsaukt funkciju_1, kas izmaina pieejamā budžeta vertību
 funkcija_1(123123)
 funkcija_2(ienakumi,true, 'ALga2',136);
