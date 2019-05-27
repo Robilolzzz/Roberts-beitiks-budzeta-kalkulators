@@ -64,3 +64,30 @@
   .list__total {
     align-self: flex-end;
   }
+  :root {
+    --main-bg-color: coral;
+    --main-txt-color: blue;
+    --main-padding: 15px;
+    --large-padding: 30px;
+    --max-width: 30px;
+    --breakpoint-medium: 800px;
+  }
+  #div1 {
+    background-color: var(--main-bg-color);
+    color: var(--main-txt-color);
+    padding: var(--main-padding);
+    max-width: var(--max-width);
+
+  }
+  #div2{
+    background-color: var(--main-bg-color);
+    color: var(--main-txt-color);
+    padding: var(--main-padding);
+    max-width: var(--max-width);
+  }
+
+
+
+
+
+
