@@ -1,33 +1,39 @@
-  //1.Nodevinēt mainīgos kurš iegūst ienākumu saraksta elemetu no html dokumenta
-const ienakumi = document.getElementById('all_income');
-//2.Nodevinēt mainīgos kurš iegūst izdevumu saraksta elemetu no html dokumenta
-const izdevumi = document.getElementById('all_expenses');
-//3.Nodevinēt mainīgos kurš iegūst pieejamā budžeta vertības elemetu no html dokumenta
-const budget = document.getElementById('budget__value');
-//console.log("ienakumi",ienakumi,"izdevumi",izdevumi,"budget",budget);
+ //Nodevinēt mainīgos kurš iegūst ienākumu saraksta elemetu no html dokumenta
+//Nodevinēt mainīgos kurš iegūst izdevumu saraksta elemetu no html dokumenta
+//Nodevinēt mainīgos kurš iegūst pieejamā budžeta vertības elemetu no html dokumenta
+const incomeList = document.getElementById('all_income');
+const expenseList = document.getElementById('all_expenses');
+const totalBudget = document.getElementById('budget__value');
 
-//4.Izveidot funkciju_1, kas izmaina pieejamā budžeta vertību
-function funkcija_1(value){
-document.getElementById('budget__value').innerHTML = value;
+const budgetType = document.getElementById('add_type').value;
+const budgetIncome = document.getElementById('add_description').value;
+const budgetExpense = document.getElementById('add_value').value;
 
-}
-//5.Izveidot funkciju_2, kuru izsaucot, tiek pievienoti ienākumi vai izdevumi html elementu sarakstiem
-function funkcija_2(ienakumi,type,desc,value){
-console.log("ienakumi",ienakumi,"type",type,"desc",desc,"value",value)
-}
-//6.Izveidot funkciju_3, kas izsaucas pēc pogas "pievienot" nospiešanas
-function myFunction() {
-console.log("rtv");
-}
-//7.Funkcijai_3 jāpārbauda vai apraksta un summas lauks ir aizpildīts, ja nav, tad izvada paziņojumu par to, ka kāds no laukiem nav aizpildīts
+//Izveidot fukciju kas izmaina pieejamā budžeta vertību
+const TotalBudget = (value) => {
+  totalBudget.innerHTML = value;
+};
 
-//8.Funkcijai_3 ir jāizsauc funkcija_2, kas pievieno ienākumu vai izdevumu sarakstam jaunu ierakstu.
-//9.Lai pārbaudītu vai izveidotās funkcijas darbojas pareizi, izsauc tās zemāk un ievieto fake datus
-//10.Izsaukt funkciju_2, kas pievieno ienākumu sarakstam vertības
+//Izveidot funkciju kura izsaucot pievieno ienākumus vai izdevumus to html elemntu sarakstiem
+const addItemToList = (list, type, description, value) => {
+  const item = `
+    <div class="list_item">
+      <div class="list_description">${description}</div>
+      <div class="list_value">${type ? '+' : '-'}${value}€</div>
+    </div>
+  `;
+  list.insertAdjacentHTML('beforeend', item);
+};
 
-//11.Izsaukt funkciju_2, kas pievieno izdevumu sarakstam vertības
+//Izsaukt fukciju kas pievieno Ienākumu sarakstam vertības
+//Izsaukt fukciju kas pievieno izdevumu sarakstam vertības
+//Izsaukt fukciju kas izmaina pieejamā budžeta vertību
+addItemToList(incomeList, true, 'Alga2', 120);
+addItemToList(expenseList, false, 'Degviela', 20);
+TotalBudget(300);
 
-//12.Izsaukt funkciju_1, kas izmaina pieejamā budžeta vertību
-funkcija_1(123123)
-funkcija_2(ienakumi,true, 'ALga2',136);
-//funkcija_2(all_expenses, true, 'laacis' , 26);
+//Izveidot fukciju kas isaucās pēc pogas "pievienot" nospiešanas
+//fukcijai japarbauda vai apraksta un summas lauks ir aizpildīts, ja nav tad izvada paziņojumu par to ka kads no laukiem nav aizpildīts
+const button = () => {
+  console.log(budgetIncome);
+};
