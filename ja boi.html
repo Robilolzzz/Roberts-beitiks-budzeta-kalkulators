@@ -1,13 +1,13 @@
 <html>
 	<head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="ja boi.css">
+    <link rel="stylesheet" href="css.css">
 	</head>
 	<body>
 		<div class="container grid_layout">
       <div class="top">
         <div class="budget__title">Pieejamais budžets</div>
-        <div class="budget__total"><span id="budget__value">100</span>€</div>
+        <div class="budget__total"><span id="budget__value">0</span>€</div>
         <div class="budget__add">
           <select id="add_type">
             <option value="income">+</option>
@@ -15,27 +15,28 @@
           </select>
           <input id="add_description" type="text" name="description" placeholder="Apraksts">
           <input id="add_value" type="number" name="value" placeholder="summa">
-          <button onclick="myfunction()">Pievienot</button>
+          <button onclick="addtolist()">Pievienot</button>
         </div>
       </div>
 
 			<div class="income left list">
 				<h1>Ienākumi</h1>
 				<div id="all_income" class="list__inner">
-          <div class="list_item"><div class="list_description">Alga</div><div class="list_value">+200€</div></div>
+          <!-- <div class="list_item"><div class="list_description">Alga</div><div class="list_value">+200€</div></div> -->
 				</div>
-				<div class="list__total">+<span class="total_income">200</span>€</div>
+				<div class="list__total">+<span class="total_income">0</span>€</div>
 			</div>
 
 			<div class="expenses right list">
 				<h1>Izdevumi</h1>
 				<div id="all_expenses" class="list__inner">
-            <div class="list_item"><div class="list_description">Ēdiens</div><div class="list_value">-100€</div></div>
+            <!-- <div class="list_item"><div class="list_description">Ēdiens</div><div class="list_value">-100€</div></div> -->
 				</div>
-				<div class="list__total">-<span class="total_expenses">100</span>€</div>
+				<div class="list__total">-<span class="total_expenses">0</span>€</div>
 			</div>
 
-		</div>
+    </div>
+    <button onclick="clearlocal()">Clear Local Storage</button>
   </body>
-  <script src="ja boi.js"></script>
+  <script src="mainJS.js"></script>
 </html>
