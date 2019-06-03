@@ -2,7 +2,6 @@
 .container {
   max-width: 1000px;
   margin: auto;
-  font-style: Courier;
 }
 
 /* Pieškir izkārtojumu ar css grid, priekš desktop*/
@@ -33,6 +32,7 @@
 .container > div {
   padding: 30px;
   border: 1px blueviolet solid;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .container > div h1 {
