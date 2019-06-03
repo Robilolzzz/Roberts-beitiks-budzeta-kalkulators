@@ -78,7 +78,19 @@ function clearlocal() {
 }
 
 //Salabot localStorage tā, lai pēc lapas refresha nepazūd pieejamais budžets un kopējā izdevumu un ienākumu vērtība
+clearElement.addEventListener("click", function(){
+    localStorage.clear()
+    location.reload()
+  })
+
 //Pievienot iespēju izveidot jaunu ierakstu budzeta kalkulātora izmantojot enter taustinu
+var input2 = document.getElementById('add_description');
+input2.addEventListener('keyup', function(event) {
+event.preventDefault();
+if(event.keycode == 13){
+  addtolist();
+}
+});
 //Izveidot vienu mainīgo, kurā veido sarakstu ar ienākumiem un izdevumiem un to visu glabāt objektā, kuru pēc tam saglabā localStorage
 //Optimizēt kodu, atbrīvoties no liekā
 //Pievienot iespēju nodzēst sarakstu elementu un tas automātiski atrēķinās nost
